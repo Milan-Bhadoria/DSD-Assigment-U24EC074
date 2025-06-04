@@ -8,7 +8,7 @@ module rca_8(
     always@(*) begin
     s[0] = a[0] ^ b[0] ^ cin;
       carry[0] = (a[0] & b[0]) | ((a[0] ^ b[0]) & cin);
-        for(int i=0;i<8;i++)begin
+        for(int i=1;i<8;i++)begin
             if (i<7) begin
                 carry[i] = (a[i] & b[i]) | ((a[i] ^ b[i]) & carry[i-1]);
             end
