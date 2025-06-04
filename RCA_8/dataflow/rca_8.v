@@ -16,6 +16,7 @@ module rca_8(
                 assign s[i] = (a[i] ^ b[i]) ^ c[i-1] ;
                 assign c[i] = (a[i] & b[i]) | ((a[i] ^ b[i]) & c[i-1] );   
             end
+        end
             endgenerate
         assign cout = c[7];
 endmodule
