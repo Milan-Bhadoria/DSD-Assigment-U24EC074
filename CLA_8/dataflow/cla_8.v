@@ -24,7 +24,7 @@ module cla_8(
   output cout
   );
   wire [1:0] c;
-  cla_4b cla1(.a(a[3:0]),.b(b[3:0]),.cin(cin),.s(s[3:0]),.cout(c[0]));
-  cla_4b cla2(.a(a[7:4]),.b(b[7:4]),.cin(c[0]),.s(s[7:4]),.cout(c[1]));
+  cla_4 cla1(.a(a[3:0]),.b(b[3:0]),.cin(cin),.s(s[3:0]),.cout(c[0]));
+  cla_4 cla2(.a(a[7:4]),.b(b[7:4]),.cin(c[0]),.s(s[7:4]),.cout(c[1]));
   assign cout=c[1];
 endmodule
