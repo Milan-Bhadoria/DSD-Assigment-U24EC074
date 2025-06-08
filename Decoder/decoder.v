@@ -15,9 +15,6 @@ always @(* ) begin
    o[0] =  (x & y) & z;
  end
    else begin
-    x=1'bx;
-    y=1'bx;
-    z=1'bx;
     o=8'bx;
    end
 end
