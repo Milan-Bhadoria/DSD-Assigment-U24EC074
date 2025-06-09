@@ -15,7 +15,7 @@ always @(* ) begin
    o[0] =  (x & y) & z;
  end
    else begin
-    o=8'bx;
+    o = x;
    end
 end
 endmodule
