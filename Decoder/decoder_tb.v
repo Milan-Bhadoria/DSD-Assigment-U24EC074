@@ -6,22 +6,18 @@ module deco_tb ();
   initial begin
     $dumpfile("deco.vcd");
     $dumpvars(0, deco_tb);
+    
     for(integer j=0;j<2;j=j+1)begin
         En = j;
-    if (En==1)begin
+      if(En==0) begin
+      #10;
+     end
+    else begin
     for(integer i=0;i<8;i=i+1)begin
       {x,y,z} = i;
-
-        $display("Input: x=%b, y=%b, z=%b → Output: o=%b", x, y, z, o);
       #10;
-    end
-    end
-    if(En==0)begin
-    for(integer i=0;i<8;i=i+1)begin
-      {x,y,z} = i;
 
-        $display("Input: x=%b, y=%b, z=%b → Output: o=%b", x, y, z, o);
-      #10;
+     $display("Input: x=%b, y=%b, z=%b En=%b -> Output: o=%b", x, y, z,En, o);
     end
     end
     end
