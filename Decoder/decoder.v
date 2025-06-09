@@ -4,7 +4,7 @@ module deco(
   output reg [7:0]o
 );
 always @(* ) begin
- if(En==0)begin
+  if(En==1)begin
    o[7] = (~x & ~y) & ~z;
    o[6] = (~x & ~y) & z;
    o[5] = (~x & y) & ~z;
