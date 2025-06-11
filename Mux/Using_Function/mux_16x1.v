@@ -4,7 +4,7 @@ module mux_16x1(
   output reg o
 );
 reg [3:0]hold;
-    function reg mux_4x1;
+    function mux_4x1;
         input [3:0]in;
         input [1:0]sel;
         case (sel)
