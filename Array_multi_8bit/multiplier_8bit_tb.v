@@ -7,7 +7,7 @@ multi_8 dut(a,b,o);
 initial begin
     $dumpfile("multi.vcd");
     $dumpvars(0 ,multi_8_tb);
-    a = 100; b = 100; #10; 
+    a = 0; b = 255; #10; 
     $display("Input : a=%d , b=%d -> o=%d" , a,b,o);
     a = 3; b = 5; #10;
     $display("Input : a=%d , b=%d -> o=%d" , a,b,o); 
