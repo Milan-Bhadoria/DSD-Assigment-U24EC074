@@ -17,7 +17,7 @@ module tb_Up_counter_3bit();
     initial begin
         $dumpfile("counter.vcd");
         $dumpvars(0, tb_Up_counter_3bit);
-        $display("clk = %b | reset = %b | Q = %b", clk, reset, Q);
+        $monitor("clk = %b | reset = %b | Q = %b", clk, reset, Q);
         #90;
         $finish;
     end
