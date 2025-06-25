@@ -8,8 +8,7 @@ module bcd(
         o[3:0] = in;
         end
     else begin
-        o[7:4] = 4'b0001;
-        o[3:0] = in - 4'b1010;
+        o = in + 4'b0110;
     end
     end
 endmodule
