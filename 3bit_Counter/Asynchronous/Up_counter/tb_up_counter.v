@@ -15,7 +15,7 @@ module tb_Up_asyn();
     initial begin
         $dumpfile("counter.vcd");
         $dumpvars(0, tb_Up_asyn);
-        $display("clk = %b | reset = %b | Q = %b", clk, reset, Q);
+        $monitor("clk = %b | reset = %b | Q = %b", clk, reset, Q);
         #90;
         $finish;
     end
