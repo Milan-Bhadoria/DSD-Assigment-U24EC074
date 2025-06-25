@@ -32,5 +32,7 @@ module Up_counter_3bit(
     flip_flop t2(.D(D1), .clk(clk), .reset(reset), .Q(q1));
     flip_flop t3(.D(D2), .clk(clk), .reset(reset), .Q(q2));
 
-    assign Q = {q2, q1, q0};
+   not n1(Q[0],~q0);
+   not n2(Q[1],~q1);
+   not n3(Q[2],~q2);
 endmodule
