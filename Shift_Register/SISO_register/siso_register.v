@@ -9,13 +9,13 @@ module flip_flop(
 endmodule
 module SISO_register(
     input clk,Din,
-    output [3:0]Q
+    output Q
 );
   wire q0,q1,q2,q3;
   flip_flop s1(.clk(clk), .D(Din), .Q(q3));
   flip_flop s2(.clk(clk), .D(q3), .Q(q2));
   flip_flop s3(.clk(clk), .D(q2), .Q(q1));
   flip_flop s4(.clk(clk), .D(q1), .Q(q0));
-  assign Q = {q3,q2,q1,q0};
+  assign Q = q0;
   
 endmodule
