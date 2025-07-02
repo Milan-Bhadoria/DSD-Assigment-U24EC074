@@ -11,7 +11,7 @@ module Booth_multi #(parameter bit = 8)(
   always @(*)begin
   product = {acc,q,q_1};
     
-   for(i=0;i<8;i=i+1)begin
+      for(i=0;i<bit;i=i+1)begin
       if(product[1:0] == 2'b01)begin
        product[2*bit:bit+1] = product[2*bit:bit+1] + m;
        end
