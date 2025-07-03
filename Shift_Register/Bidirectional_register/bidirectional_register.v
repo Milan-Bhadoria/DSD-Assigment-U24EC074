@@ -8,7 +8,7 @@ module flip_flop(
   end
 endmodule
 
-module PISO_register(
+module Bidirectional_register(
     input clk,
     input D,
     input shift,
